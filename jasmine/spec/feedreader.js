@@ -36,7 +36,7 @@ $(function() {
         });
 
         // allFeeds object and ensures it has a name defined and not empty
-        it('Name is defined', function() {
+        it('name is defined', function() {
             allFeeds.forEach(function(feed) {
                 feddName = feed.name;
                 expect(feddName).toBeDefined();
@@ -45,8 +45,13 @@ $(function() {
         });
     });
 
+    // the body has the class of menuhidden to make it hidden by default
+    describe('The menu', function() {
+        it('hidden menu', function() {
+            expect($('.menu-hidden').is(':visible')).toBe(true);
+        });
+    });
 
-    /* TODO: Write a new test suite named "The menu" */
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
