@@ -51,12 +51,12 @@ $(function() {
             expect($('.menu-hidden').is(':visible')).toBe(true);
         });
 
-        it('is visible on click', function() {
+        it('visible on click', function() {
             $('a.menu-icon-link').trigger('click');
             expect($('.menu-hidden').is(':visible')).toBe(false);
         });
 
-        it('is hidden when clicked again', function() {
+        it('hidden when clicked again', function() {
             $('a.menu-icon-link').trigger('click');
             expect($('.menu-hidden').is(':visible')).toBe(true);
         });
