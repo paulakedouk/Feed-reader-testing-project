@@ -55,6 +55,11 @@ $(function() {
             $('a.menu-icon-link').trigger('click');
             expect($('.menu-hidden').is(':visible')).toBe(false);
         });
+
+        it('is hidden when clicked again', function() {
+            $('a.menu-icon-link').trigger('click');
+            expect($('.menu-hidden').is(':visible')).toBe(true);
+        });
     });
 
 
